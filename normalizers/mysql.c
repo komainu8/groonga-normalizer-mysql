@@ -875,7 +875,6 @@ mysql_unicode_900_next(grn_ctx *ctx,
   if (table) {
     options = grn_table_cache_normalizer_options(ctx,
                                                  table,
-                                                 string,
                                                  mysql_unicode_900_open_options,
                                                  mysql_unicode_900_close_options,
                                                  NULL);
