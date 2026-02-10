@@ -29,4 +29,8 @@ RUN \
     devscripts \
     libgroonga-dev \
     pkg-config && \
-  apt clean
+  apt clean && \
+  pkg-config --exists msgpack && echo OK || echo NG && \
+  pkg-config --debug msgpack & \
+  ls /usr/lib/aarch64-linux-gnu/pkgconfig/msgpack.pc
+
