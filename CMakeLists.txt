@@ -74,11 +74,9 @@ else()
 
   find_package(Groonga ${GROONGA_REQUIRED_VERSION})
   if(TARGET PkgConfig::Groongamsgpack_pkg_msgpack)
-    message(STATUS "Target does not exist")
-  else()
     message(STATUS "Target exist")
-    get_target_property(LIBS PkgConfig::Groongamsgpack_pkg_msgpack INTERFACE_LINK_LIBRARIES)
-    message(STATUS "Groongamsgpack target link libs: ${LIBS}")
+  else()
+    message(STATUS "Target does not exist")
   endif()
 
   if(NOT Groonga_FOUND)
