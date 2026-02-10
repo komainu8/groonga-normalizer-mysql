@@ -29,5 +29,7 @@ RUN \
     devscripts \
     libgroonga-dev \
     pkg-config && \
-  apt clean
+  apt clean && \
+  pkg-config --cflags --libs msgpack && \
+  pkg-config --cflags --libs msgpack-c
 

@@ -77,6 +77,12 @@ else()
     message(STATUS "Target exist")
   else()
     message(STATUS "Target does not exist")
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(MSGPACK msgpack)
+
+    message(STATUS "MSGPACK_FOUND: ${MSGPACK_FOUND}")
+    message(STATUS "MSGPACK_LIBRARIES: ${MSGPACK_LIBRARIES}")
+    message(STATUS "MSGPACK_INCLUDE_DIRS: ${MSGPACK_INCLUDE_DIRS}")
   endif()
 
   if(NOT Groonga_FOUND)
