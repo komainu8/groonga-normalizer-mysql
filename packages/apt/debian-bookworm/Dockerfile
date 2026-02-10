@@ -31,6 +31,6 @@ RUN \
     pkg-config && \
   apt clean && \
   pkg-config --exists msgpack && echo OK || echo NG && \
-  pkg-config --debug msgpack & \
+  pkg-config --debug msgpack && \
   ls -al /usr/lib/aarch64-linux-gnu/
 
