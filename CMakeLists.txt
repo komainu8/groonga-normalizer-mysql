@@ -74,9 +74,9 @@ else()
 
   find_package(Groonga ${GROONGA_REQUIRED_VERSION})
   if(TARGET PkgConfig::Groongamsgpack_pkg_msgpack)
-    message(STATUS "Target does not exist");
+    message(STATUS "Target does not exist")
   else()
-    message(STATUS "Target exist");
+    message(STATUS "Target exist")
   endif()
 
   if(NOT Groonga_FOUND)
