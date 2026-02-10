@@ -28,6 +28,7 @@ RUN \
     debhelper \
     devscripts \
     libgroonga-dev \
+    libmsgpack-dev \
     pkg-config && \
   apt clean && \
   pkg-config --cflags --libs msgpack && \
