@@ -77,6 +77,8 @@ else()
     message(STATUS "Target does not exist")
   else()
     message(STATUS "Target exist")
+    get_target_property(LIBS PkgConfig::Groongamsgpack_pkg_msgpack INTERFACE_LINK_LIBRARIES)
+    message(STATUS "Groongamsgpack target link libs: ${LIBS}")
   endif()
 
   if(NOT Groonga_FOUND)
