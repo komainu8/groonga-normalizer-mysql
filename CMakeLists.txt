@@ -73,6 +73,12 @@ else()
   string(STRIP "${GROONGA_REQUIRED_VERSION}" GROONGA_REQUIRED_VERSION)
 
   find_package(Groonga ${GROONGA_REQUIRED_VERSION})
+  if(TARGET PkgConfig::Groongamsgpack_pkg_msgpack)
+    message(STATUS "Target does not exist");
+  else()
+    message(STATUS "Target exist");
+  endif()
+
   if(NOT Groonga_FOUND)
     find_package(PkgConfig REQUIRED)
     pkg_check_modules(pkg_groonga REQUIRED IMPORTED_TARGET
